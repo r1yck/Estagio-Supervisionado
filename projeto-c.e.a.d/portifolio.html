@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colégio Estadual Alfredo Dutra - Portfólio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+<header>
+    <img src="imagens/logo.png" alt="Logo Colégio">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quem-somos.html">Nossa Escola</a></li>
+        <li><a href="portifolio.html" class="active">Portfólio</a></li>
+        <li><a href="Galeria.html">Galeria</a></li>
+        <li><a href="Secretaria.html">Secretaria</a></li>
+        <li><a href="cadastro.php">Cadastro</a></li>
+    </ul>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h3>Técnico em Informática</h3>
+        <img src="imagens/dupla_info.png" alt="Curso Técnico">
+        <p>Curso Presencial, diplomação como Curso Técnico. Certificação intermediária e avançada.</p>
+        <p><strong>Perfil de Atuação:</strong> Assistência técnica e manutenção em informática, redes, aplicativos e periféricos para desktops e computadores de pequeno porte.</p>
+        <p><strong>Habilidades:</strong> Instalação de sistemas operacionais, manutenção de redes locais, configuração de aplicativos e hardware.</p>
+    </div>
+
+    <div class="card">
+        <h3>Laboratório de Informática</h3>
+        <img src="imagens/lab-info.jpg" alt="Laboratório">
+        <p>Espaço equipado para aulas práticas de informática, proporcionando aprendizado em ambientes reais e tecnológicos.</p>
+    </div>
+
+    <div class="card">
+        <h3>Sala de Aula</h3>
+        <img src="imagens/sala-info.jpg" alt="Sala de Aula">
+        <p>Ambiente de aprendizado confortável, organizado e equipado para o desenvolvimento acadêmico e técnico dos alunos.</p>
+    </div>
+</div>
+
+<footer>
+    <div style="display: flex; justify-content: center;">
+        <img src="imagens/gov.png" alt="Governo da Bahia">
+    </div>
+    <ul>
+        <li><a href="https://www.educacao.ba.gov.br/">SEC</a></li>
+        <li><a href="http://www.educacao.ba.gov.br/midias/fotos">Midiotecas</a></li>
+        <li><a href="https://www.bahia.ba.gov.br/sites-do-governo/">Governo da Bahia</a></li>
+        <li><a href="http://estudantes.educacao.ba.gov.br/">Estudantes</a></li>
+        <li><a href="http://institucional.educacao.ba.gov.br/">Institucional</a></li>
+        <li><a href="http://escolas.educacao.ba.gov.br/">Escolas</a></li>
+    </ul>
+    <p>Colégio Estadual Alfredo Dutra - Tempo Integral<br>Av. Esperanto, s/n - Centro, Itapetinga - BA, 45700-000</p>
+    <p>Telefone: (77) 3261-1219</p>
+    <p>Todos os Direitos Reservados: Prof. Ubiratan Ferreira</p>
+</footer>
+
+<script>
+function toggleMenu() { document.querySelector('.menu').classList.toggle('show'); }
+
+// Scroll Animation para cards
+const cards = document.querySelectorAll('.card');
+function revealCards() {
+    cards.forEach(card => {
+        const windowHeight = window.innerHeight;
+        const elementTop = card.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) { card.classList.add('show'); }
+    });
+}
+window.addEventListener('scroll', revealCards);
+window.addEventListener('load', revealCards);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colégio Estadual Alfredo Dutra - Tempo Integral</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<header>
+    <img src="imagens/logo.png" alt="Logo Colégio">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <ul class="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="quem-somos.html">Nossa Escola</a></li>
+        <li><a href="portifolio.html">Portfólio</a></li>
+        <li><a href="Galeria.html">Galeria</a></li>
+        <li><a href="Secretaria.html">Secretaria</a></li>
+        <li><a href="cadastro.php">Cadastro</a></li>
+    </ul>
+</header>
+
+<div id="slider">
+    <figure>
+        <img src="imagens/bannerDois.png" alt="Banner 1">
+        <img src="imagens/bannerQuatro.png" alt="Banner 2">
+        <img src="imagens/bannerTres.png" alt="Banner 3">
+        <img src="imagens/capa.png" alt="Banner 4">
+        <img src="imagens/bannerTres.png" alt="Banner 5">
+    </figure>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h3>Secretaria de Educação</h3>
+        <p>A Secretaria de Educação Profissional e Tecnológica (Setec) planeja, coordena e avalia políticas voltadas para a educação profissional e tecnológica, fortalecendo a formação dos estudantes e ampliando oportunidades.</p>
+        <p>Atua na integração com o ensino médio, educação de jovens e adultos, incentivo à inovação, uso de tecnologias educacionais e certificação profissional.</p>
+    </div>
+
+    <div class="card">
+        <h3>Prática Técnica</h3>
+        <p>Os alunos participam de atividades em laboratórios equipados, desenvolvendo habilidades em informática, eletrônica e robótica, aplicando conhecimentos em projetos práticos que estimulam raciocínio lógico e criatividade.</p>
+        <img src="imagens/lab-info.jpg" width="340" height="250" alt="Laboratório de Informática">
+        <img src="imagens/IMG_20230928_191140.jpg" width="340" height="250" alt="Atividade prática dos alunos">
+    </div>
+
+    <div class="card">
+        <h3>Estrutura e Recursos</h3>
+        <p>O colégio possui salas climatizadas, biblioteca, quadra poliesportiva, auditório e laboratórios especializados, garantindo aulas mais interativas e inovadoras.</p>
+        <img src="imagens/IMG_20231003_195944.jpg" width="300" height="200" alt="Estrutura escolar">
+    </div>
+</div>
+
+<footer>
+   <div style="display: flex; justify-content: center;">
+  <img src="imagens/gov.png" alt="Governo da Bahia">
+</div>
+    <ul>
+        <li><a href="https://www.educacao.ba.gov.br/">SEC</a></li>
+        <li><a href="http://www.educacao.ba.gov.br/midias/fotos">Midiotecas</a></li>
+        <li><a href="https://www.bahia.ba.gov.br/sites-do-governo/">Governo da Bahia</a></li>
+        <li><a href="http://estudantes.educacao.ba.gov.br/">Estudantes</a></li>
+        <li><a href="http://institucional.educacao.ba.gov.br/">Institucional</a></li>
+        <li><a href="http://escolas.educacao.ba.gov.br/">Escolas</a></li>
+    </ul>
+    <p>Colégio Estadual Alfredo Dutra - Tempo Integral<br>Av. Esperanto, s/n - Centro, Itapetinga - BA, 45700-000</p>
+    <p>Telefone: (77) 3261-1219</p>
+    <p>Todos os Direitos Reservados: Prof. Ubiratan Ferreira</p>
+</footer>
+
+<script>
+function toggleMenu() { document.querySelector('.menu').classList.toggle('show'); }
+
+// Scroll Animation
+const cards = document.querySelectorAll('.card');
+function revealCards() {
+    cards.forEach(card => {
+        const windowHeight = window.innerHeight;
+        const elementTop = card.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) {
+            card.classList.add('show');
+        }
+    });
+}
+window.addEventListener('scroll', revealCards);
+window.addEventListener('load', revealCards);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colégio Estadual Alfredo Dutra - Nossa Escola</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+<header>
+    <img src="imagens/logo.png" alt="Logo Colégio">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quem-somos.html" class="active">Nossa Escola</a></li>
+        <li><a href="portifolio.html">Portfólio</a></li>
+        <li><a href="Galeria.html">Galeria</a></li>
+        <li><a href="Secretaria.html">Secretaria</a></li>
+        <li><a href="cadastro.php">Cadastro</a></li>
+    </ul>
+</header>
+
+<div id="slider" class="slider-quem-somos">
+    <figure>
+        <img src="imagens/frente_dutra.png" alt="Frente do Colégio">
+        <img src="imagens/banner.png" alt="Atividades">
+        <img src="imagens/Educacional.png" alt="Educacional">
+    </figure>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h3>Quem Somos</h3>
+        <p>O Colégio Estadual Alfredo Dutra é uma instituição de ensino voltada para a formação integral dos alunos, promovendo atividades acadêmicas, culturais e esportivas, além de laboratórios equipados e incentivo à inovação tecnológica.</p>
+    </div>
+
+    <div class="card map-container">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3849.469088316808!2d-40.24342312594247!3d-15.242193609598381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7480beecaf2e5fd%3A0x8e5fe7468b07b1ef!2sCol%C3%A9gio%20Estadual%20Alfredo%20Dutra%20-%20Tempo%20Integral!5e0!3m2!1spt-BR!2sbr!4v1694570815870!5m2!1spt-BR!2sbr"  
+        allowfullscreen="" loading="lazy">
+    </iframe>
+    </div>
+
+</div>
+
+<footer>
+    <div style="display: flex; justify-content: center;">
+        <img src="imagens/gov.png" alt="Governo da Bahia">
+    </div>
+    <ul>
+        <li><a href="https://www.educacao.ba.gov.br/">SEC</a></li>
+        <li><a href="http://www.educacao.ba.gov.br/midias/fotos">Midiotecas</a></li>
+        <li><a href="https://www.bahia.ba.gov.br/sites-do-governo/">Governo da Bahia</a></li>
+        <li><a href="http://estudantes.educacao.ba.gov.br/">Estudantes</a></li>
+        <li><a href="http://institucional.educacao.ba.gov.br/">Institucional</a></li>
+        <li><a href="http://escolas.educacao.ba.gov.br/">Escolas</a></li>
+    </ul>
+    <p>Colégio Estadual Alfredo Dutra - Tempo Integral<br>Av. Esperanto, s/n - Centro, Itapetinga - BA, 45700-000</p>
+    <p>Telefone: (77) 3261-1219</p>
+    <p>Todos os Direitos Reservados: Prof. Ubiratan Ferreira</p>
+</footer>
+
+<script>
+function toggleMenu() { document.querySelector('.menu').classList.toggle('show'); }
+
+// Scroll Animation
+const cards = document.querySelectorAll('.card');
+function revealCards() {
+    cards.forEach(card => {
+        const windowHeight = window.innerHeight;
+        const elementTop = card.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) {
+            card.classList.add('show');
+        }
+    });
+}
+window.addEventListener('scroll', revealCards);
+window.addEventListener('load', revealCards);
+</script>
+</body>
+</html>

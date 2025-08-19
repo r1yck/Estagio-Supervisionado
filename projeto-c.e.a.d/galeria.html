@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colégio Estadual Alfredo Dutra - Galeria</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/galeria.css">
+</head>
+
+<body>
+
+<header>
+    <img src="imagens/logo.png" alt="Logo Colégio">
+    <button class="menu-toggle">☰</button>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quem-somos.html">Nossa Escola</a></li>
+        <li><a href="portifolio.html">Portfólio</a></li>
+        <li><a href="Galeria.html" class="active">Galeria</a></li>
+        <li><a href="Secretaria.html">Secretaria</a></li>
+        <li><a href="cadastro.php">Cadastro</a></li>
+    </ul>
+</header>
+
+<div class="container">
+    <!-- Slides -->
+    <div class="slides">
+        <div class="numbertext">1 / 6</div>
+        <img src="imagens/1_img_5terre.png" alt="Foto 1">
+    </div>
+    <div class="slides">
+        <div class="numbertext">2 / 6</div>
+        <img src="imagens/2_img_5terre.png" alt="Foto 2">
+    </div>
+    <div class="slides">
+        <div class="numbertext">3 / 6</div>
+        <img src="imagens/3_img_5terre.png" alt="Foto 3">
+    </div>
+    <div class="slides">
+        <div class="numbertext">4 / 6</div>
+        <img src="imagens/4_img_5terre.png" alt="Foto 4">
+    </div>
+    <div class="slides">
+        <div class="numbertext">5 / 6</div>
+        <img src="imagens/5_img_5terre.png" alt="Foto 5">
+    </div>
+    <div class="slides">
+        <div class="numbertext">6 / 6</div>
+        <img src="imagens/6_img_5terre.png" alt="Foto 6">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column"><img class="demo" src="imagens/1_img_5terre.png" onclick="currentSlide(1)" alt="Foto 1"></div>
+        <div class="column"><img class="demo" src="imagens/2_img_5terre.png" onclick="currentSlide(2)" alt="Foto 2"></div>
+        <div class="column"><img class="demo" src="imagens/3_img_5terre.png" onclick="currentSlide(3)" alt="Foto 3"></div>
+        <div class="column"><img class="demo" src="imagens/4_img_5terre.png" onclick="currentSlide(4)" alt="Foto 4"></div>
+        <div class="column"><img class="demo" src="imagens/5_img_5terre.png" onclick="currentSlide(5)" alt="Foto 5"></div>
+        <div class="column"><img class="demo" src="imagens/6_img_5terre.png" onclick="currentSlide(6)" alt="Foto 6"></div>
+    </div>
+</div>
+
+<!-- Texto introdutório -->
+<div class="container">
+    <h2>Galeria de fotos</h2>
+    <p>Explore momentos, aulas e laboratórios da nossa escola. Todas as imagens são ilustrativas do cotidiano acadêmico e das atividades desenvolvidas pelos alunos.</p>
+</div>
+
+<!-- Tabs -->
+<div class="container">
+    <ul class="TabbedPanelsTabGroup">
+        <li class="TabbedPanelsTab ActiveTab">INFORMÁTICA</li>
+        <li class="TabbedPanelsTab">ANÁLISE CLÍNICA</li>
+        <li class="TabbedPanelsTab">NUTRIÇÃO</li>
+        <li class="TabbedPanelsTab">OUTROS</li>
+    </ul>
+    <div class="TabbedPanelsContentGroup">
+        <div class="TabbedPanelsContent active">
+            <h2>Alunos em foco</h2>
+            <div class="img-container"><img src="imagens/labHard.jpg" alt="Laboratório de Hardware"></div>
+            <div class="img-container"><img src="imagens/IMG_20231003_195939.jpg" alt="Alunos em atividade"></div>
+            <div class="img-container"><img src="imagens/turmainf.jpg" alt="Turma de Informática"></div>
+            <div class="img-container"><img src="imagens/IMG_20230928_191120.jpg" alt="Alunos em aula"></div>
+            <div class="img-container"><img src="imagens/salaaulaV.jpg" alt="Sala de aula"></div>
+            <div class="img-container"><img src="imagens/IMG_20230928_191140.jpg" alt="Aula prática"></div>
+            <div class="img-container"><img src="imagens/IMG_20230424_195446.jpg" alt="Laboratório de informática"></div>
+            <div class="img-container"><img src="imagens/IMG_20230424_195457.jpg" alt="Alunos estudando"></div>
+            <div class="img-container"><img src="imagens/IMG_20230928_191125.jpg" alt="Atividades práticas"></div>
+            <div class="img-container"><img src="imagens/IMG_20231123_202528.jpg" alt="Aula de laboratório"></div>
+            <div class="img-container"><img src="imagens/IMG_20231123_202728.jpg" alt="Atividades em grupo"></div>
+            <div class="img-container"><img src="imagens/IMG_20231123_202720.jpg" alt="Alunos em prática de laboratório"></div>
+            <div class="img-container"><img src="imagens/labsoft-jp.jpg" alt="Laboratório de software"></div>
+        </div>
+        <div class="TabbedPanelsContent"><p>Conteúdo da aba ANÁLISE CLÍNICA.</p></div>
+        <div class="TabbedPanelsContent"><p>Conteúdo da aba NUTRIÇÃO.</p></div>
+        <div class="TabbedPanelsContent"><p>Conteúdo da aba OUTROS.</p></div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div style="display: flex; justify-content: center;">
+    <img src="imagens/gov.png" alt="Governo da Bahia">
+  </div>
+  <ul>
+      <li><a href="https://www.educacao.ba.gov.br/">SEC</a></li>
+      <li><a href="http://www.educacao.ba.gov.br/midias/fotos">Midiotecas</a></li>
+      <li><a href="https://www.bahia.ba.gov.br/sites-do-governo/">Site do Governo</a></li>
+      <li><a href="http://estudantes.educacao.ba.gov.br/">Estudantes</a></li>
+      <li><a href="http://institucional.educacao.ba.gov.br/">Institucional</a></li>
+      <li><a href="http://escolas.educacao.ba.gov.br/">Escolas</a></li>
+  </ul>
+  <p>Endereço: Av. Esperanto, s/n - Centro, Itapetinga - BA, 45700-000</p>
+  <p>Telefone: (77) 3261-1219</p>
+  <p>Todos os Direitos Reservados: Prof. Ubiratan Ferreira</p>
+</footer>
+
+<script>
+// Menu toggle mobile
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+menuToggle.addEventListener('click', () => menu.classList.toggle('show'));
+
+// Slides
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) { showSlides(slideIndex += n); }
+function currentSlide(n) { showSlides(slideIndex = n); }
+function showSlides(n) {
+    let slides = document.getElementsByClassName("slides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+    for (let i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active",""); }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+// Tabs com fade
+const tabs = document.querySelectorAll('.TabbedPanelsTab');
+const contents = document.querySelectorAll('.TabbedPanelsContent');
+
+// inicializa primeira aba visível
+contents.forEach((c,i)=>{ c.style.opacity=0; c.style.position='absolute'; });
+contents[0].classList.add('active');
+contents[0].style.opacity = 1;
+contents[0].style.position = 'relative';
+tabs[0].classList.add('ActiveTab');
+
+tabs.forEach((tab,index)=>{
+    tab.addEventListener('click', ()=>{
+        tabs.forEach(t=>t.classList.remove('ActiveTab'));
+        contents.forEach(c=>c.classList.remove('active'));
+        tabs[index].classList.add('ActiveTab');
+        contents[index].classList.add('active');
+        // fade
+        contents.forEach(c=>{
+            c.style.opacity=0;
+            c.style.position='absolute';
+        });
+        contents[index].style.opacity=1;
+        contents[index].style.position='relative';
+    });
+});
+</script>
+
+</body>
+</html>
